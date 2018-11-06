@@ -1,0 +1,18 @@
+<h1>Articles#index</h1>
+<%= link_to 'New Article', new_article_path %>
+<% @articles.each do |a| %>
+
+<div class="article">
+<p><strong><%= link_to a.title, article_path(a) %></strong>
+<%= link_to 'Delete', article_path(a),
+method: :delete,
+data: { confirm: "Delete article '#{a.title}'?" } %>
+</p>
+
+<p> <%= a.content %> </p>
+
+</div>
+
+<hr>
+<% end %>
+
