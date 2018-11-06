@@ -1,10 +1,19 @@
-
 <h3><%= @article.title %></h3>
-<p> <%= @article.content %> </p>
 
-<%= link_to 'Edit', edit_article_path %>
-<%= link_to 'Delete', article_path(@article),
-method: :delete,
-data: { confirm: "Delete article '#{@article.title}'?" } %>
+<div class="show-actions">
+    <div class="edit">
+        <%= link_to 'Edit', edit_article_path %>
+    </div>
+    <div class="delete">
+        <%= link_to 'Delete', article_path(@article),
+            method: :delete,
+            data: { confirm: "Delete article '#{@article.title}'?" } %>
+    </div>
 
-<p><%= link_to 'Back to list', articles_path %></p>
+</div>
+
+<p>
+    <%= @article.content %>
+</p>
+
+<%= link_to 'Back', articles_path %>
