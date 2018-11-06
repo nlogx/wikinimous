@@ -1,11 +1,10 @@
 <%= form_for(@article) do |f| %>
-<div>
-<%= f.label :title %> <br>
-<%= f.text_field :title %>
-</div>
-<div>
-<%= f.label :content %> <br>
-<%= f.text_field :content, class: 'content'%>
-</div>
-<br> <%= f.submit %>
+
+<h5><%= f.label :title %></h5>
+<p><%= f.text_field :title, class: 'title' %></p>
+<h5><%= f.label :content %></h5>
+<p><%= f.text_field :content, class: 'content' %></p>
+<%= f.button :button, type: :submit, class: 'btn-submit' do %>
+<%= icon('fas', 'check') %>
+<% end %>
 <% end %>

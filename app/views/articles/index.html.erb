@@ -1,13 +1,13 @@
-<h1>Articles</h1>
-<h1>.</h1>
+<h3><%= icon('fas', 'cookie-bite') %></h3>
 
 <% @articles.each do |a| %>
 
 <div class="article">
 <p><strong><%= link_to a.title, article_path(a) %></strong>
-<%= link_to '-', article_path(a),
+<%= link_to article_path(a),
 method: :delete,
-data: { confirm: "Delete article '#{a.title}'?" } %>
+data: { confirm: "Delete article '#{a.title}'?" } do %> -
+<% end %>
 </p>
 
 <p> <%= a.content %> </p>

@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
 body {
   text-align: center;
 }
@@ -21,10 +25,9 @@ a {
   padding: 5px;
   text-decoration: none;
   color: #333;
-}
-
-a:hover {
+  &:hover {
   color: grey;
+  }
 }
 
 ul.navbar {
@@ -36,9 +39,7 @@ ul.navbar {
   margin: 0px;
   position: sticky;
   top: 0;
+  a {
+  font-size: 24x;
 }
-
-ul.navbar a {
-  font-size: 20px;
-
 }

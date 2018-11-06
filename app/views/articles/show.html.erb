@@ -1,19 +1,19 @@
 <h3><%= @article.title %></h3>
 
-<div class="show-actions">
-    <div class="edit">
-        <%= link_to 'Edit', edit_article_path %>
-    </div>
-    <div class="delete">
-        <%= link_to 'Delete', article_path(@article),
-            method: :delete,
-            data: { confirm: "Delete article '#{@article.title}'?" } %>
-    </div>
+<%= link_to edit_article_path do %>
+<%= icon('fas', 'pen-alt') %>
+<% end %>
 
-</div>
+<%= link_to article_path(@article), method: :delete,
+    data: { confirm: "Delete article '#{@article.title}'?" } do %>
+<%= icon('fas', 'trash-alt') %>
+<% end %>
+
 
 <p>
     <%= @article.content %>
 </p>
 
-<%= link_to 'Back', articles_path %>
+<%= link_to articles_path do %>
+<%= icon('fas', 'angle-left') %>
+<% end %>

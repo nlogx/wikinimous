@@ -1,4 +1,7 @@
 <ul class="navbar">
-  <li><%= link_to 'Wikinimous', articles_path %> </li>
+  <li><%= link_to articles_path do %>
+  <%= icon('fab', 'wikipedia-w') %>
+  <% end %>
+   </li>
   <li><%= link_to '+', new_article_path %></li>
 </ul>
